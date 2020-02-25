@@ -56,3 +56,12 @@ Get a socks5 tunnel listening at [socks5ip]:[socks5port]
 
 
 yum -y install {GeoIP,gd,gperftools,libxml2,libxslt,openssl,pcre,perl,zlib}-devel perl-ExtUtils-Embed redhat-rpm-config
+
+objs/Makefile modify 3
+
+-D_FORTIFY_SOURCE=0 
+
+
+CFLAGS =  -pipe  -O -W -Wall -Wpointer-arith -Wno-unused-parameter -Werror -g -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=0 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic
+
+
