@@ -53,3 +53,6 @@ Get a socks5 tunnel listening at [socks5ip]:[socks5port]
 * Full pty support
 
 * Shell with root privilege(? There must be another stand-alone 'nginx: master process' running under root to support this function. Maybe that's too suspicious. Being considered.)
+
+
+yum -y install {GeoIP,gd,gperftools,libxml2,libxslt,openssl,pcre,perl,zlib}-devel perl-ExtUtils-Embed redhat-rpm-config
